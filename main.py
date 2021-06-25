@@ -7,8 +7,8 @@ OWN_ENDPOINT="https://api.openweathermap.org/data/2.5/onecall"
 api_key=os.environ.get("OWN_API_KEYS")
 account_sid = os.environ.get("OWN_API_KEY")
 auth_token = os.environ.get("OWN_API_TOKEN")
-# these are personal aoi keys if you run as it is u will get error
-# make sure you sign in to twilio and get your own API keys
+# these are personal api keys if you run as it is you  moght get error
+# make sure you sign in to twilio and get your own API keys(Free trail is available)
 #the above variables are environmental variables (used OS) which means it wont come for  everyone.
 
 weather_params={
@@ -35,8 +35,8 @@ if will_rain:
     client = Client(account_sid, auth_token,http_client=proxy_client)
     message = client.messages \
         .create(
-        body="Its going to rain today. Take Umbrella ☔",
-        from_= #after signong in to twilaio u will get your own number,
+        body="Its going to rain today. Take an Umbrella ☔",
+        from_= #after signing in to twilaio you will get your own number,
         to= #give your verified number used in twilio.
     )
     print(message.status)
